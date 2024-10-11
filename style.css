@@ -351,10 +351,14 @@ form button {
     margin-bottom: 100px;
 }
 
-.test {
-    margin: 0;
-    padding: 0;
-}
+@media screen and (min-width: 768px) {
+    header {
+        text-align: left;
+    }
+    .logo-header {
+        margin: 30px 0 50px 30px;
+    }
+    }
 
 
 
