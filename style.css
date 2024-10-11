@@ -1,0 +1,362 @@
+/* manrope-regular - latin */
+/* manrope-200 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 200;
+    src: url('./Assets/Fonts/manrope-v15-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* manrope-300 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 300;
+    src: url('./Assets/Fonts/manrope-v15-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* manrope-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./Assets/Fonts/manrope-v15-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* manrope-500 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./Assets/Fonts/manrope-v15-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* manrope-600 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./Assets/Fonts/manrope-v15-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* manrope-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./Assets/Fonts/manrope-v15-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* manrope-800 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    src: url('./Assets/Fonts/manrope-v15-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  :root {
+    --var1: #3EE9E5;
+    --var2: #093F68;
+    --var3: #777F98;
+    --var4: #FFFFFF;
+    --var5: #080C20;
+    --var6: #FF2965;
+  }
+
+body {
+    background-color: var(--var5);
+    font-family: "Manrope";
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.logo-header {
+    margin: 20px 0 60px 0;
+}
+.full-bandeau {
+    display: flex;
+}
+
+.left-bandeau,
+.right-bandeau {
+    width: 50%;
+}
+
+.left-bandeau img,
+.right-bandeau img {
+    width: 100%;
+}
+
+h1 {
+    font-size: 2rem;
+    line-height: 40px;
+    margin: 20px auto;
+    color: var(--var4);
+}
+
+h1 .line-break {
+    display: block;
+}
+
+h1 span {
+    color: var(--var1);
+}
+
+.description-text {
+    color: var(--var3);
+    margin: 0 20px;
+}
+
+.mouse-icon {
+    margin: 20px 0 60px 0;
+}
+
+.icon-container {
+    color: var(--var3);
+    margin: 50px 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2 {
+    color: #FFFFFF;
+    font-size: 1.125rem;
+    margin-bottom: 0;
+    margin-top: 30px;
+}
+
+.icon-container p {
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.first-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.second-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.third-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.fourth-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.payement-container {
+    color: var(--var4);
+    margin: 0 10px;
+}
+
+.payement-description {
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 27px;
+}
+
+.payement-description p {
+    color: var(--var3);
+    font-size: .9375rem;
+    margin: 10px;
+}
+
+.free-offer {
+    background-color: var(--var2);
+    border-radius: 8px;
+    padding-left: 40px;
+    padding-right: 50px;
+    margin-top: 80px;
+    padding-bottom: 20px;
+    position: relative;
+    padding-top: 30px;
+}
+
+.free-offer p,
+.payant-offer p {
+    font-size: .9375rem;
+    line-height: 25px;
+}
+
+.payant-offer p {
+   width: 105%;
+}
+
+.free-offer svg {
+    position: absolute;
+    top: -22px;
+}
+
+h4 {
+    font-size: 1.125rem;
+    
+}
+
+.offer-paragraph {
+    color: var(--var3);
+}
+
+h5 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+.advantages {
+    font-size: .9375rem;
+}
+.free-advantages,
+.payant-advantages {
+    font-size: .9375rem;
+    list-style-type: none; /* Supprime les puces par défaut */
+    padding: 0; /* Supprime le padding par défaut */
+}
+
+.free-advantages li,
+.payant-advantages li {
+    position: relative; /* Nécessaire pour positionner le SVG */
+    padding-left: 25px; /* Espace pour le SVG */
+    margin-bottom: 13px;
+}
+
+.free-advantages li::before,
+.payant-advantages li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); /* Centre le SVG verticalement */
+    width: 11px; /* Largeur du SVG */
+    height: 8px; /* Hauteur du SVG */
+    background-image: url('./Assets/Img/Valid_icon.svg'); /* Chemin vers ton SVG */
+    background-size: contain; /* Ajuste la taille du SVG */
+    background-repeat: no-repeat; /* Empêche la répétition */
+}
+
+.payant-advantages li::before {
+    background-image: url('./Assets/Img/Valid_icon_black.svg'); 
+}
+
+.payant-offer {
+    background-color: var(--var1);
+    color: var(--var5);
+    border-radius: 8px;
+    padding-left: 40px;
+    padding-right: 50px;
+    margin-top: 80px;
+    padding-bottom: 20px;
+    padding-top: 30px;
+    position: relative;
+}
+
+.payant-offer svg{
+    position: absolute;
+    top: -35px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+}
+
+.price h5 {
+    font-weight: 800;
+    margin-right: 10px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    position: relative;
+}
+
+h6 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--var4);
+    margin: 100px 70px 20px 70px;
+    position: relative;
+    z-index: 1;
+    background: transparent;
+}
+.svg-background {
+    position: absolute;
+    top: 100px;
+    left: -10px;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+}
+form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+textarea {
+    background-color: var(--var2);
+    border: none;
+    border-radius: 100px;
+    height: 46px;
+    line-height: 3;
+    font-size: .9375rem;
+    font-weight: 800;
+    resize: none;
+    margin: 15px 0;
+}
+
+textarea::placeholder {
+    color: var(--var3);
+    font-family: 'Manrope';
+    padding-left: 20px;   
+}
+
+form button {
+    height: 48px;
+    border: none;
+    border-radius: 100px;
+    background-color: var(--var1);
+    font-family: 'Manrope';
+    font-weight: 800;
+    font-size: .9375rem;
+    margin-bottom: 100px;
+}
+
+.test {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
