@@ -68,6 +68,7 @@
 body {
     background-color: var(--var5);
     font-family: "Manrope";
+    align-items: center;
 }
 
 header {
@@ -81,17 +82,36 @@ header {
     margin: 20px 0 60px 0;
 }
 .full-bandeau {
-    display: flex;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr; */
+    grid-template-areas: "i1 i2"
+                         "ta ta";
 }
+
+.left-bandeau {
+    grid-area: i1;
+}
+
+.right-bandeau {
+    grid-area: i2;
+}
+
 
 .left-bandeau,
 .right-bandeau {
-    width: 50%;
+    width: 100%;
 }
 
 .left-bandeau img,
 .right-bandeau img {
     width: 100%;
+}
+
+.description-text {
+    color: var(--var3);
+    margin: 0 20px;
+    grid-area: ta;
 }
 
 h1 {
@@ -109,10 +129,7 @@ h1 span {
     color: var(--var1);
 }
 
-.description-text {
-    color: var(--var3);
-    margin: 0 20px;
-}
+
 
 .mouse-icon {
     margin: 20px 0 60px 0;
@@ -138,30 +155,9 @@ h2 {
     line-height: 25px;
 }
 
-.first-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 30px 0;
-}
-
-.second-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 30px 0;
-}
-
-.third-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 30px 0;
-}
-
+.first-card,
+.second-card,
+.third-card,
 .fourth-card {
     display: flex;
     flex-direction: column;
@@ -172,7 +168,10 @@ h2 {
 
 .payement-container {
     color: var(--var4);
-    margin: 0 10px;
+    margin: 0 10px 100px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .payement-description {
@@ -298,13 +297,19 @@ footer {
     text-align: center;
     align-items: center;
     position: relative;
+    /* background-image: url('./Assets/Img/mobile-signature.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 100%;
+    height: auto; */
 }
 
 h6 {
     font-size: 1.5rem;
     font-weight: 800;
     color: var(--var4);
-    margin: 100px 70px 20px 70px;
+    margin: 0 70px 20px 70px;
     position: relative;
     z-index: 1;
     background: transparent;
@@ -353,14 +358,119 @@ form button {
 
 @media screen and (min-width: 768px) {
     header {
-        text-align: left;
+        overflow: hidden;
     }
+
     .logo-header {
         margin: 30px 0 50px 30px;
     }
+
+    .full-bandeau {
+        display: flex;
+        flex-direction: row;
+    
+        
+    }
+    .left-bandeau,
+    .right-bandeau {
+        position: relative; /* Position relative pour pouvoir utiliser des valeurs négatives */
+        width: 50%; /* L'image prend 50% de la largeur de la page */
+        height: 100%;
+    }
+    .left-bandeau img {
+        width: 100%; /* L'image s'ajuste à la largeur de son conteneur */
+        height: 100%; /* Garde les proportions de l'image */
+        display: block; /* Évite les espaces indésirables sous l'image */
     }
 
+    .right-bandeau img {
+        width: 100%;
+        height: 100%; 
+        /* display: block;  */
+    }
 
+    .description-text {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        background-image: url('./Assets/Img/mobile-signature.svg');
+        background-size: cover;
+        background-position: center;
+        
+    }
 
+    h1 .line-break {
+        display: none;
+    }
 
+    .mouse-icon {
+        margin-bottom: 0;
+    }
+
+    .icon-container {
+           width: 80%;
+           padding-left: 50px;
+    }
+
+    .first-card,
+    .second-card,
+    .third-card,
+    .fourth-card {
+        display: flex;
+        flex-direction: row;
+        
+
+    }
+    .first-card svg,
+    .second-card svg,
+    .third-card svg,
+    .fourth-card svg {
+        margin: 10px 30px;
+        width: 120px;
+        height: 124px;
+       
+
+    }
+
+    .first-text,
+    .second-text,
+    .third-text,
+    .fourth-text {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        text-align: left;
+        margin-left: 30px;
+    }
+
+    .payement-container {
+       padding: 0 100px;
+    }
+    
+    footer {
+        padding: 0 90px;
+        margin-bottom: 50px;
+        background-image: url('./Assets/Img/mobile-signature.svg');
+        background-size: cover;
+        background-position: center;
+        
+    }
+
+    .svg-background {
+        display: none;
+    }
+    form {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        align-items: center;
+    }
+    form button {
+        margin-bottom: 0px;
+        margin-left: 10px;
+    }
+
+}
 
