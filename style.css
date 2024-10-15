@@ -68,23 +68,25 @@
 body {
     background-color: var(--var5);
     font-family: "Manrope";
-    align-items: center;
+    margin: 0; 
+  
+}
+
+.logo-maker {
+    margin-top: 30px;
+    margin-bottom: 60px;
 }
 
 header {
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
 }
 
-.logo-header {
-    margin: 20px 0 60px 0;
-}
 .full-bandeau {
     display: grid;
-    /* grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr; */
+     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr; 
     grid-template-areas: "i1 i2"
                          "ta ta";
 }
@@ -110,7 +112,8 @@ header {
 
 .description-text {
     color: var(--var3);
-    margin: 0 20px;
+    margin: 10px 20px;
+    font-size: .9375rem;
     grid-area: ta;
 }
 
@@ -129,6 +132,10 @@ h1 span {
     color: var(--var1);
 }
 
+.description-text p {
+    font-size: .9375rem;
+}
+
 
 
 .mouse-icon {
@@ -139,7 +146,7 @@ h1 span {
     color: var(--var3);
     margin: 50px 20px;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     flex-direction: column;
 }
 
@@ -159,8 +166,6 @@ h2 {
 .second-card,
 .third-card,
 .fourth-card {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     text-align: center;
     margin: 30px 0;
@@ -172,6 +177,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: left;
 }
 
 .payement-description {
@@ -187,6 +193,10 @@ h3 {
     color: var(--var3);
     font-size: .9375rem;
     margin: 10px;
+}
+
+.offers {
+    margin: 0 10px;
 }
 
 .free-offer {
@@ -235,14 +245,14 @@ h5 {
 .free-advantages,
 .payant-advantages {
     font-size: .9375rem;
-    list-style-type: none; /* Supprime les puces par défaut */
-    padding: 0; /* Supprime le padding par défaut */
+    list-style-type: none; 
+    padding: 0; 
 }
 
 .free-advantages li,
 .payant-advantages li {
-    position: relative; /* Nécessaire pour positionner le SVG */
-    padding-left: 25px; /* Espace pour le SVG */
+    position: relative; 
+    padding-left: 25px; 
     margin-bottom: 13px;
 }
 
@@ -252,12 +262,12 @@ h5 {
     position: absolute;
     left: 0;
     top: 50%;
-    transform: translateY(-50%); /* Centre le SVG verticalement */
-    width: 11px; /* Largeur du SVG */
-    height: 8px; /* Hauteur du SVG */
-    background-image: url('./Assets/Img/Valid_icon.svg'); /* Chemin vers ton SVG */
-    background-size: contain; /* Ajuste la taille du SVG */
-    background-repeat: no-repeat; /* Empêche la répétition */
+    transform: translateY(-50%); 
+    width: 11px; 
+    height: 8px; 
+    background-image: url('./Assets/Img/Valid_icon.svg'); 
+    background-size: contain; 
+    background-repeat: no-repeat;
 }
 
 .payant-advantages li::before {
@@ -296,38 +306,30 @@ footer {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    position: relative;
-    /* background-image: url('./Assets/Img/mobile-signature.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    max-width: 100%;
-    height: auto; */
-}
+    
+} 
 
 h6 {
     font-size: 1.5rem;
     font-weight: 800;
     color: var(--var4);
-    margin: 0 70px 20px 70px;
+    padding: 15px 60px;
+    margin-top: 20px;
+    margin-bottom: 0;
     position: relative;
-    z-index: 1;
-    background: transparent;
+    background-image: url('./Assets/Img/mobile-signature.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 90%; 
 }
-.svg-background {
-    position: absolute;
-    top: 100px;
-    left: -10px;
-    width: 100%;
-    height: auto;
-    z-index: 0;
-}
+
 form {
     width: 90%;
     display: flex;
     flex-direction: column;
 }
-textarea {
+#Email {
     background-color: var(--var2);
     border: none;
     border-radius: 100px;
@@ -339,10 +341,25 @@ textarea {
     margin: 15px 0;
 }
 
-textarea::placeholder {
+#Email::placeholder {
     color: var(--var3);
     font-family: 'Manrope';
     padding-left: 20px;   
+}
+
+#Email:focus {
+    outline: none;
+    border: 2px solid var(--var1);
+    padding-left: 20px;
+    color: var(--var4);
+}
+
+#Email:focus::placeholder {
+    color: transparent;
+}
+
+form p {
+    display: none;
 }
 
 form button {
@@ -356,38 +373,48 @@ form button {
     margin-bottom: 100px;
 }
 
+form button:active {
+    background-color: var(--var2);
+        color: var(--var4);
+        cursor: pointer;
+        border: 2px solid var(--var1);
+}
+
 @media screen and (min-width: 768px) {
     header {
         overflow: hidden;
+        text-align: left;  
     }
 
     .logo-header {
-        margin: 30px 0 50px 30px;
+        margin: 10px 0 30px 30px;
     }
 
     .full-bandeau {
         display: flex;
         flex-direction: row;
+        position: relative;
+        min-height: 360px;
+        width: 100%;   
+    }
     
-        
-    }
-    .left-bandeau,
-    .right-bandeau {
-        position: relative; /* Position relative pour pouvoir utiliser des valeurs négatives */
-        width: 50%; /* L'image prend 50% de la largeur de la page */
-        height: 100%;
-    }
-    .left-bandeau img {
-        width: 100%; /* L'image s'ajuste à la largeur de son conteneur */
-        height: 100%; /* Garde les proportions de l'image */
-        display: block; /* Évite les espaces indésirables sous l'image */
+    .left-bandeau img{
+        left: -22%;
+        width: 44%;
     }
 
     .right-bandeau img {
-        width: 100%;
-        height: 100%; 
-        /* display: block;  */
+        right: -21%;
+        width: 44%;
     }
+
+    .left-bandeau img,
+    .right-bandeau img {
+        position: absolute;
+        height: 100%;
+    }
+
+    
 
     .description-text {
         display: flex;
@@ -395,11 +422,16 @@ form button {
         text-align: center;
         align-items: center;
         justify-content: center;
-        width: 50%;
-        background-image: url('./Assets/Img/mobile-signature.svg');
-        background-size: cover;
+        width: 190%;
+        margin: 40px 0;
+        background-image: url('./Assets/Img/tablet_signature.svg');
+        background-size: 100% 100%;
         background-position: center;
-        
+        background-repeat: no-repeat; 
+    }
+
+    .description-text p {
+        margin-top: 0;
     }
 
     h1 .line-break {
@@ -411,8 +443,7 @@ form button {
     }
 
     .icon-container {
-           width: 80%;
-           padding-left: 50px;
+           margin-top: 80px;   
     }
 
     .first-card,
@@ -420,19 +451,26 @@ form button {
     .third-card,
     .fourth-card {
         display: flex;
-        flex-direction: row;
-        
-
+        margin: 20px 0;
     }
-    .first-card svg,
-    .second-card svg,
-    .third-card svg,
-    .fourth-card svg {
-        margin: 10px 30px;
-        width: 120px;
-        height: 124px;
-       
 
+    .first-card img,
+    .second-card img,
+    .third-card img,
+    .fourth-card img {
+        width: 160px;
+        height: 164px;
+    }
+    .first-card,
+    .third-card {
+        margin-left: 120px;
+        margin-right: 80px;
+    }
+
+    .second-card,
+    .fourth-card {
+        margin-left: 70px;
+        margin-right: 180px;
     }
 
     .first-text,
@@ -441,26 +479,41 @@ form button {
     .fourth-text {
         display: flex;
         flex-direction: column;
-        align-items: start;
         text-align: left;
-        margin-left: 30px;
+        margin-left: 55px;
+    }
+    
+    
+
+    .first-text p,
+    .second-text p,
+    .third-text p,
+    .fourth-text p {
+        margin-top: 11px;
+    }
+    
+    .offers {
+        width: 82%;
     }
 
     .payement-container {
        padding: 0 100px;
     }
-    
+
+    .free-offer {
+        padding-right: 20px;
+    }
     footer {
-        padding: 0 90px;
+        padding: 50px 90px;
         margin-bottom: 50px;
         background-image: url('./Assets/Img/mobile-signature.svg');
-        background-size: cover;
+        background-size: 100% 80%;
         background-position: center;
-        
+        background-repeat: no-repeat;   
     }
 
-    .svg-background {
-        display: none;
+    h6 {
+        background-image: none
     }
     form {
         display: grid;
@@ -469,8 +522,142 @@ form button {
     }
     form button {
         margin-bottom: 0px;
-        margin-left: 10px;
+        margin-left: 16px;
+    }
+}
+
+@media screen and (min-width: 950px) {
+    .full-bandeau {
+        height: 450px;
+    }
+}
+
+@media screen and (min-width: 1180px){
+    .logo-maker {
+        margin: 70px 0 70px 120px;
     }
 
+    .full-bandeau {
+        min-height: 460px;
+    }
+
+    .description-text {
+        margin-left: 80px;
+        margin-right: 80px;
+        width: 100%;
+    }
+
+    .left-bandeau,
+    .right-bandeau {
+        width: 50%;  
+    }
+
+    .left-bandeau img,
+    .right-bandeau img {
+        width: 25%;
+    }
+
+    .left-bandeau img {
+        left: 0;
+    }
+
+    .right-bandeau img {
+        right: 0;
+    }
+    
+
+    h1 {
+        font-size: 3rem;
+    }
+    
+    .icon-container {
+        flex-direction: row;
+        margin-left: 150px;
+        margin-top: 202px;
+        margin-bottom: 202px;
+       
+    }
+
+    .first-card,
+    .second-card,
+    .third-card,
+    .fourth-card {
+        flex-direction: column;
+        margin: 0;
+        align-items: start;
+        margin-right: 30px;
+        padding-right: 48px;
+    }
+
+    .second-card,
+    .fourth-card {
+        margin-top: 40px;
+    }
+
+    .first-text,
+    .second-text,
+    .third-text,
+    .fourth-text {
+        margin-left: 0;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    .payement-container {
+        width: 60%;
+        justify-content: center;
+        
+    }
+
+    .payement-description {
+        width: 70%;
+        margin-bottom: 72px;
+    }
+
+    .payement-description p {
+        margin: 0 10px;
+    }
+
+    .offers {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+    }
+
+    .free-offer {
+        margin-right: 20px;
+        height: 90%;
+    }
+
+    footer {
+        padding: 80px 0;
+        background-size: 100% 80%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    h6 {
+        font-size: 2rem;
+    }
+
+    form {
+        width: 33%;
+    }
+
+    button:hover {
+        background-color: var(--var2);
+        color: var(--var4);
+        cursor: pointer;
+        border: 2px solid var(--var1);
+    }
 }
 
