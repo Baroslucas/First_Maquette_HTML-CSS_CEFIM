@@ -69,7 +69,6 @@ body {
     background-color: var(--var5);
     font-family: "Manrope";
     margin: 0; 
-  
 }
 
 .logo-maker {
@@ -135,8 +134,6 @@ h1 span {
 .description-text p {
     font-size: .9375rem;
 }
-
-
 
 .mouse-icon {
     margin: 20px 0 60px 0;
@@ -305,8 +302,7 @@ footer {
     display: flex;
     flex-direction: column;
     text-align: center;
-    align-items: center;
-    
+    align-items: center; 
 } 
 
 h6 {
@@ -328,17 +324,21 @@ form {
     width: 90%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+
 }
+
 #Email {
     background-color: var(--var2);
     border: none;
     border-radius: 100px;
     height: 46px;
+    width: 100%;
     line-height: 3;
     font-size: .9375rem;
     font-weight: 800;
     resize: none;
-    margin: 15px 0;
+    margin-bottom: 24px; 
 }
 
 #Email::placeholder {
@@ -358,12 +358,9 @@ form {
     color: transparent;
 }
 
-form p {
-    display: none;
-}
-
 form button {
     height: 48px;
+    width: 100%;
     border: none;
     border-radius: 100px;
     background-color: var(--var1);
@@ -414,8 +411,6 @@ form button:active {
         height: 100%;
     }
 
-    
-
     .description-text {
         display: flex;
         flex-direction: column;
@@ -461,6 +456,7 @@ form button:active {
         width: 160px;
         height: 164px;
     }
+
     .first-card,
     .third-card {
         margin-left: 120px;
@@ -483,8 +479,6 @@ form button:active {
         margin-left: 55px;
     }
     
-    
-
     .first-text p,
     .second-text p,
     .third-text p,
@@ -498,6 +492,7 @@ form button:active {
 
     .payement-container {
        padding: 0 100px;
+       margin-bottom: 50px;
     }
 
     .free-offer {
@@ -520,6 +515,11 @@ form button:active {
         grid-template-columns: 70% 30%;
         align-items: center;
     }
+
+    #Email {
+        margin: 0;
+    }
+
     form button {
         margin-bottom: 0px;
         margin-left: 16px;
@@ -565,7 +565,6 @@ form button:active {
         right: 0;
     }
     
-
     h1 {
         font-size: 3rem;
     }
@@ -575,7 +574,6 @@ form button:active {
         margin-left: 150px;
         margin-top: 202px;
         margin-bottom: 202px;
-       
     }
 
     .first-card,
@@ -630,7 +628,6 @@ form button:active {
         display: flex;
         align-items: center;
         width: 100%;
-
     }
 
     .free-offer {
@@ -651,13 +648,6 @@ form button:active {
 
     form {
         width: 33%;
-    }
-
-    button:hover {
-        background-color: var(--var2);
-        color: var(--var4);
-        cursor: pointer;
-        border: 2px solid var(--var1);
     }
 }
 
